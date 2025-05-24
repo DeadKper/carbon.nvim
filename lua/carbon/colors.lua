@@ -55,75 +55,68 @@ function M.get_ibm_carbon()
 	}
 end
 
----@class carbon.Colors
----@field background string?
----@field	background_float string?
----@field	foreground string?
----@field	foreground_hover string?
----@field	statusline_background string?
----@field	black string?
----@field	red string?
----@field	blue string?
----@field	yellow string?
----@field	green string?
----@field	pink string?
----@field	cyan string?
----@field	white string?
----@field	bright_black string?
----@field	bright_red string?
----@field	bright_blue string?
----@field	bright_yellow string?
----@field	bright_green string?
----@field	bright_pink string?
----@field	bright_cyan string?
----@field	bright_white string?
----@field	error string?
----@field	ok string?
----@field	alert string?
----@field	warning string?
----@field	info string?
----@field	accent string?
----@field	brackets string?
-
 ---@return carbon.Colors
 function M.colors()
 	local ibm_carbon = M.get_ibm_carbon()
 
-	return {
-		background = ibm_carbon.gray[100],
-		background_float = ibm_carbon.gray[80],
-		foreground = ibm_carbon.cool_gray[40],
-		foreground_hover = ibm_carbon.cool_gray[20],
+	local colors = {
+		foreground = ibm_carbon.cool_gray[30],
 
-		statusline_background = ibm_carbon.gray[90],
+		background = "#080808",
+		background_float = ibm_carbon.gray[100],
+		background_statusline = "#292929",
 
-		black = ibm_carbon.gray[100],
-		red = ibm_carbon.magenta[50],
-		blue = ibm_carbon.blue[40],
-		yellow = ibm_carbon.purple[40],
 		green = ibm_carbon.green[40],
+		yellow = ibm_carbon.yellow[30],
+		orange = ibm_carbon.orange[40],
+		red = ibm_carbon.red[50],
+		magenta = ibm_carbon.magenta[50],
 		pink = ibm_carbon.magenta[40],
-		cyan = ibm_carbon.teal[30],
-		white = ibm_carbon.cool_gray[40],
-
-		bright_black = ibm_carbon.gray[80],
-		bright_red = ibm_carbon.red[30],
-		bright_blue = ibm_carbon.cyan[20],
-		bright_yellow = ibm_carbon.purple[20],
-		bright_green = ibm_carbon.green[20],
-		bright_pink = ibm_carbon.magenta[20],
-		bright_cyan = ibm_carbon.teal[10],
-		bright_white = ibm_carbon.cool_gray[20],
-
-		error = ibm_carbon.red[60],
-		ok = ibm_carbon.green[50],
-		alert = ibm_carbon.orange[40],
-		warning = ibm_carbon.yellow[30],
-		info = ibm_carbon.cyan[20],
+		lavender = ibm_carbon.purple[40],
+		purple = ibm_carbon.purple[50],
+		blue = ibm_carbon.blue[40],
+		sky = ibm_carbon.cyan[30],
+		cyan = ibm_carbon.cyan[40],
+		teal = ibm_carbon.teal[40],
+		white = ibm_carbon.cool_gray[10],
+		gray = ibm_carbon.gray[50],
+		black = ibm_carbon.gray[100],
 
 		accent = ibm_carbon.magenta[40],
-		brackets = ibm_carbon.warm_gray[20],
+		highlight = ibm_carbon.cool_gray[10],
+		brackets = ibm_carbon.gray[50],
 	}
+
+	return colors
+
+	-- return {
+	-- 	background = ibm_carbon.gray[100],
+	-- 	background_float = ibm_carbon.gray[90],
+	-- 	foreground = "#a4b5ce",
+	-- 	foreground_hover = ibm_carbon.gray[20],
+	--
+	-- 	statusline_background = ibm_carbon.gray[100],
+	--
+	-- 	black = ibm_carbon.gray[100],
+	-- 	red = ibm_carbon.magenta[50],
+	-- 	blue = ibm_carbon.blue[40],
+	-- 	purple = ibm_carbon.purple[60],
+	-- 	lavender = ibm_carbon.purple[40],
+	-- 	green = ibm_carbon.green[40],
+	-- 	pink = ibm_carbon.magenta[40],
+	-- 	teal = ibm_carbon.teal[40],
+	-- 	cyan = ibm_carbon.cyan[20],
+	-- 	white = ibm_carbon.cool_gray[40],
+	--
+	-- 	error = ibm_carbon.red[60],
+	-- 	ok = ibm_carbon.green[50],
+	-- 	alert = ibm_carbon.orange[40],
+	-- 	warning = ibm_carbon.yellow[30],
+	-- 	info = ibm_carbon.cyan[20],
+	--
+	-- 	accent = ibm_carbon.magenta[40],
+	-- 	brackets = ibm_carbon.warm_gray[20],
+	-- }
 end
 
 return M
