@@ -73,7 +73,6 @@ function M.colors()
 		magenta = ibm_carbon.magenta[50],
 		pink = ibm_carbon.magenta[40],
 		lavender = ibm_carbon.purple[40],
-		purple = ibm_carbon.purple[50],
 		blue = ibm_carbon.blue[40],
 		sky = ibm_carbon.cyan[30],
 		cyan = ibm_carbon.cyan[40],

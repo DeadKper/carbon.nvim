@@ -24,6 +24,7 @@ function M.highlights(colors, opts)
 		Normal = { fg = colors.foreground, bg = colors.background },
 		NormalFloat = { fg = colors.foreground, bg = colors.background_float },
 		Title = { link = "NormalFloat" },
+		Terminal = { link = "Normal" },
 
 		StatusLine = { fg = colors.foreground, bg = colors.background_statusline },
 		StatusLineTerm = { link = "StatusLine" },
@@ -39,7 +40,7 @@ function M.highlights(colors, opts)
 		Constant = { fg = colors.teal },
 		String = { fg = colors.lavender },
 		Character = { fg = colors.pink },
-		Number = { fg = colors.teal },
+		Number = { fg = colors.cyan },
 		Boolean = { link = "Number" },
 		Float = { link = "Number" },
 
@@ -54,7 +55,7 @@ function M.highlights(colors, opts)
 		Keyword = { fg = colors.blue },
 		Exception = { link = "Keyword" },
 
-		PreProc = { link = "Function" },
+		PreProc = { fg = colors.magenta },
 		Include = { link = "PreProc" },
 		Define = { link = "PreProc" },
 		Macro = { link = "PreProc" },
@@ -68,7 +69,7 @@ function M.highlights(colors, opts)
 		Special = { fg = colors.magenta },
 		SpecialChar = { link = "Special" },
 		Tag = { fg = colors.lavender },
-		Delimiter = { fg = colors.gray },
+		Delimiter = { fg = colors.brackets },
 		SpecialComment = { fg = colors.gray, italic = true },
 		Debug = { fg = colors.lavender },
 
@@ -76,7 +77,7 @@ function M.highlights(colors, opts)
 
 		Error = { link = "Keyword", undercurl = true, sp = colors.magenta },
 
-		Todo = { fg = colors.purple, italic = true },
+		Todo = { fg = colors.foreground, italic = true },
 
 		Added = { fg = colors.green },
 		Changed = { fg = colors.blue },
@@ -96,7 +97,7 @@ function M.highlights(colors, opts)
 
 		MatchParen = { reverse = true }, -- don't use reverse here
 
-		LspReferenceText = { fg = colors.white, sp = colors.white, underdouble = true },
+		LspReferenceText = { fg = colors.highlight, sp = colors.highlight, undercurl = true },
 		LspReferenceWrite = { link = "LspReferenceText" },
 		LspReferenceRead = { link = "LspReferenceText" },
 
@@ -135,7 +136,7 @@ function M.highlights(colors, opts)
 
 		["@constant"] = { link = "Constant" },
 		["@constant.builtin"] = { link = "Constant" },
-		["@constant.macro"] = { fg = colors.pink, sp = colors.pink, underline = true },
+		["@constant.macro"] = { link = "Macro" },
 
 		["@function"] = { link = "Function" },
 		["@function.builtin"] = { link = "Function" },
@@ -143,14 +144,16 @@ function M.highlights(colors, opts)
 		["@function.method"] = { link = "Function" },
 
 		["@variable"] = { link = "Normal" },
-		["@variable.member"] = { fg = util.lighten(colors.cyan, 0.4) },
-		["@variable.builtin"] = { fg = colors.sky },
+		["@variable.member"] = { fg = colors.sky },
+		["@variable.builtin"] = { fg = util.lighten(colors.red, 0.15) },
+
+		["@type"] = { fg = colors.magenta },
 
 		["@property"] = { link = "@variable.member" },
 		["@constructor"] = { fg = colors.magenta, bold = true },
-		["@module"] = { fg = colors.magenta },
-		["@keyword.import"] = { link = "Keyword" },
-		["@operator"] = { fg = colors.gray },
+		["@module"] = { fg = colors.teal },
+		["@keyword.import"] = { fg = colors.foreground },
+		["@operator"] = { link = "Delimiter" },
 		["@punctuation.delimiter"] = { link = "@operator" },
 	}
 

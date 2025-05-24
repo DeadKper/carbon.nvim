@@ -35,7 +35,6 @@ local M = {}
 ---@field magenta string?
 ---@field pink string?
 ---@field lavender string?
----@field purple string?
 ---@field blue string?
 ---@field sky string?
 ---@field cyan string?
