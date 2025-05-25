@@ -61,10 +61,7 @@ function M.colors()
 
 	local colors = {
 		foreground = ibm_carbon.cool_gray[30],
-
 		background = "#080808",
-		background_float = ibm_carbon.gray[100],
-		background_statusline = "#292929",
 
 		green = ibm_carbon.green[40],
 		yellow = ibm_carbon.yellow[30],

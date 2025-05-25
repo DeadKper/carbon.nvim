@@ -22,23 +22,25 @@ function M.highlights(colors, opts)
 	util.fg = colors.white
 	util.bg = colors.black
 
+	local light_bg = util.lighten(colors.black, 0.06)
+
 	---@type table<string, carbon.Highlight>
 	local hl = {
 		Normal = { fg = colors.foreground, bg = colors.background },
 		Title = { link = "NormalFloat" },
 		Terminal = { link = "Normal" },
 
-		NormalFloat = { fg = colors.foreground, bg = colors.background_float },
-		FloatTitle = { fg = colors.lavender, bg = colors.background_float },
-		FloatBorder = { fg = colors.brackets, bg = colors.background_float },
+		NormalFloat = { fg = colors.foreground, bg = light_bg },
+		FloatTitle = { fg = colors.lavender, bg = light_bg },
+		FloatBorder = { fg = colors.brackets, bg = light_bg },
 
 		Pmenu = { link = "NormalFloat" },
 		PmenuSbar = { link = "Pmenu", fg = "none" },
-		PmenuSel = { bg = util.lighten(colors.background_float, 0.2) },
+		PmenuSel = { bg = util.lighten(colors.black, 0.4) },
 		WildMenu = { fg = colors.black, bg = colors.blue },
 		PmenuThumb = { fg = "none", bg = colors.gray },
 
-		StatusLine = { fg = colors.foreground, bg = colors.background_statusline },
+		StatusLine = { fg = colors.foreground, bg = util.lighten(colors.black, 0.14) },
 		StatusLineTerm = { link = "StatusLine" },
 		StatusLineNC = { fg = colors.gray, bg = colors.background },
 		StatusLineTermNC = { link = "StatusLineNC" },

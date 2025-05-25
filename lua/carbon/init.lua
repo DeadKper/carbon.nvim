@@ -26,8 +26,6 @@ local M = {}
 ---@class carbon.Colors
 ---@field foreground string?
 ---@field background string?
----@field background_float string?
----@field background_statusline string?
 ---@field green string?
 ---@field yellow string?
 ---@field orange string?
