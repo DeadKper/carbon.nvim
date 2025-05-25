@@ -87,35 +87,6 @@ function M.colors()
 	}
 
 	return colors
-
-	-- return {
-	-- 	background = ibm_carbon.gray[100],
-	-- 	background_float = ibm_carbon.gray[90],
-	-- 	foreground = "#a4b5ce",
-	-- 	foreground_hover = ibm_carbon.gray[20],
-	--
-	-- 	statusline_background = ibm_carbon.gray[100],
-	--
-	-- 	black = ibm_carbon.gray[100],
-	-- 	red = ibm_carbon.magenta[50],
-	-- 	blue = ibm_carbon.blue[40],
-	-- 	purple = ibm_carbon.purple[60],
-	-- 	lavender = ibm_carbon.purple[40],
-	-- 	green = ibm_carbon.green[40],
-	-- 	pink = ibm_carbon.magenta[40],
-	-- 	teal = ibm_carbon.teal[40],
-	-- 	cyan = ibm_carbon.cyan[20],
-	-- 	white = ibm_carbon.cool_gray[40],
-	--
-	-- 	error = ibm_carbon.red[60],
-	-- 	ok = ibm_carbon.green[50],
-	-- 	alert = ibm_carbon.orange[40],
-	-- 	warning = ibm_carbon.yellow[30],
-	-- 	info = ibm_carbon.cyan[20],
-	--
-	-- 	accent = ibm_carbon.magenta[40],
-	-- 	brackets = ibm_carbon.warm_gray[20],
-	-- }
 end
 
 return M
