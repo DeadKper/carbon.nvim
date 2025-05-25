@@ -19,6 +19,9 @@ end
 ---@param opts carbon.Config
 ---@return table<string, carbon.Highlight>
 function M.highlights(colors, opts)
+	util.fg = colors.white
+	util.bg = colors.black
+
 	---@type table<string, carbon.Highlight>
 	local hl = {
 		Normal = { fg = colors.foreground, bg = colors.background },

@@ -68,21 +68,18 @@ local config
 local colors
 local highlights
 
-local util = require("carbon.util")
 local hl = require("carbon.highlights")
 
 ---@param opts carbon.Config?
 function M.setup(opts)
 	config = vim.tbl_deep_extend("force", require("carbon.config").default(), opts or {})
 	colors = vim.tbl_deep_extend("force", require("carbon.colors").colors(), config.overrides.colors)
+
 	highlights = hl.highlights(colors, config)
 	if type(colors["@overrides"]) == "function" then
-		highlights = vim.tbl_deep_extend("force", highlights, colors["@overrides"]())
+		highlights = vim.tbl_extend("force", highlights, colors["@overrides"]())
 	end
-	highlights = vim.tbl_deep_extend("force", highlights, config.overrides.highlights)
-
-	util.fg = colors.white
-	util.bg = colors.black
+	highlights = vim.tbl_extend("force", highlights, config.overrides.highlights)
 end
 
 function M.load()
