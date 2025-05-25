@@ -152,6 +152,11 @@ function M.highlights(colors, opts)
 		-- Value = {},
 		-- Variable = {},
 
+		ModeMsg = { fg = colors.green },
+		MoreMsg = { fg = colors.blue },
+		WarningMsg = { link = "DiagnosticWarn" },
+		ErrorMsg = { link = "DiagnosticError" },
+
 		LspReferenceText = { fg = colors.highlight, sp = colors.highlight, undercurl = true },
 		LspReferenceWrite = { link = "LspReferenceText" },
 		LspReferenceRead = { link = "LspReferenceText" },
@@ -294,6 +299,20 @@ function M.highlights(colors, opts)
 		-- OilPurge = {},
 		-- OilTrash = {},
 		-- OilTrashSourcePath = {},
+
+		MasonHeader = { fg = colors.black, bg = colors.lavender, bold = true },
+		MasonHeaderSecondary = { link = "MasonHighlightBlockBold" },
+		MasonHighlight = { fg = colors.accent },
+		MasonLink = { link = "Underlined" },
+		MasonBackdrop = { bg = light_bg },
+		MasonHighlightBlock = { fg = colors.black, bg = colors.accent },
+		MasonHighlightBlockBold = { fg = colors.black, bg = colors.accent, bold = true },
+		MasonHighlightSecondary = { fg = colors.lavender },
+		MasonHighlightBlockSecondary = { fg = colors.black, bg = colors.lavender },
+		MasonHighlightBlockBoldSecondary = { fg = colors.black, bg = colors.lavender, bold = true },
+		MasonMuted = { fg = colors.gray },
+		MasonMutedBlock = { fg = colors.black, bg = colors.gray },
+		MasonMutedBlockBold = { fg = colors.black, bg = colors.gray, bold = true },
 	}
 
 	return hl
