@@ -313,6 +313,16 @@ function M.highlights(colors, opts)
 		MasonMuted = { fg = colors.gray },
 		MasonMutedBlock = { fg = colors.black, bg = colors.gray },
 		MasonMutedBlockBold = { fg = colors.black, bg = colors.gray, bold = true },
+
+		zshCommands = { link = "Function" },
+		zshPrecommand = { link = "PreProc" },
+		zshRedir = { fg = colors.green },
+		zshSubstQuoted = { link = "Variable" },
+		zshOperator = { link = "zshRedir" },
+		zshTypes = { link = "Conditional" },
+		zshDeref = { link = "Field" },
+		zshBrackets = { link = "Comment" },
+		zshKSHFunction = { link = "Function" },
 	}
 
 	return hl
